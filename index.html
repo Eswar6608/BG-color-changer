@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .content{
+                display: flex;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform:translate(-50%, -50%);
+            }
+            #btn{
+                font-size:20px;
+                padding:5px;
+                border: 2px solid #cb41cb;
+                border-radius: 5px;
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <button id="btn" onclick="bgColorChange()">Change Color</button>
+        </div>
+        <script>
+
+            function bgColorChange() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                 for (var i = 0; i < 6; i++) {
+                     color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    console.log(color)
+                    console.log(letters[Math.floor(Math.random() * 16)])
+                    document.body.style.background = color
+                 }
+            
+        </script>
+    </body>
+</html>
